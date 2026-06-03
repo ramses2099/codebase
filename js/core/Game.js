@@ -73,11 +73,11 @@ export class Game {
     this.player.reset()
 
     this.enemyManager.reset()
-    this.enemyManager.spawn(250, 50)
-    this.enemyManager.spawn(300, 50)
-    this.enemyManager.spawn(600, 50)
-    this.enemyManager.spawn(800, 50)
-    this.enemyManager.spawn(400, 50)
+    this.enemyManager.spawn('drifter',250, 50)
+    this.enemyManager.spawn('drifter',300, 50)
+    this.enemyManager.spawn('seeker',60, 50)
+    this.enemyManager.spawn('seeker',80, 50)
+    this.enemyManager.spawn('drifter',40, 50)
 
     this.lastTime = performance.now()
   }
@@ -130,7 +130,7 @@ export class Game {
     const availableWidth = window.innerWidth - CANVAS_MARGIN * 2
     const availableHeight = window.innerHeight - CANVAS_MARGIN * 2
 
-    if (availableWidth / availableHeight > ASPECT_RATIO) {
+    if (Math.floor(availableWidth / availableHeight) > Math.floor(ASPECT_RATIO)) {
       h = availableHeight
       w = Math.floor(h * ASPECT_RATIO)
     } else {

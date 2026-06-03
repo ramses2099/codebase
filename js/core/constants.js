@@ -12,5 +12,7 @@ export const GAME_STATES = {
 }
 
 export const ENEMY_DESPAWN_MARGIN = 200;
+export const ENEMY_SPAWN_MARGIN = 100;
+export const ENEMY_SPAWN_INTERVAL = 2
 
 export const DEBUG = true;

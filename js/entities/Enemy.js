@@ -35,6 +35,9 @@ export class Enemy {
   reset () {
     this.active = false
     this.health = this.data.health
+    if(this.behaviour.reset){
+      this.behaviour.reset();
+    }
   }
 
   update (dt, player) {

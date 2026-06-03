@@ -30,7 +30,7 @@ export class RenderSystem {
   renderEnemies (enemies) {
     for (let i = 0; i < enemies.length; i++) {
       const enemy = enemies[i];
-      this.ctx.fillStyle = '#ff0000'
+      this.ctx.fillStyle = enemy.data.color
       this.ctx.fillRect(enemy.x, enemy.y, enemy.width, enemy.height) 
     }
   }
