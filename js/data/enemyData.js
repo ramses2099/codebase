@@ -5,6 +5,7 @@ export const enemyData = {
     speed: 80,
     health: 1,
     damage: 1,
-    collisionRadius: 24
+    collisionRadius: 24,
+    behaviourType: 'seek'
   }
 }

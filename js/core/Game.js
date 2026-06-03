@@ -71,7 +71,13 @@ export class Game {
 
     // Reset player position
     this.player.reset()
-    this.enemyManager.spawn(25, 50)
+
+    this.enemyManager.reset()
+    this.enemyManager.spawn(250, 50)
+    this.enemyManager.spawn(300, 50)
+    this.enemyManager.spawn(600, 50)
+    this.enemyManager.spawn(800, 50)
+    this.enemyManager.spawn(400, 50)
 
     this.lastTime = performance.now()
   }
@@ -143,6 +149,7 @@ export class Game {
   update (dt) {
     if (this.state !== GAME_STATES.PLAYING) return
     this.player.update(dt, this.keys)
+    this.enemyManager.update(dt, this.player)
   }
 
   gameLoop (timestamp) {

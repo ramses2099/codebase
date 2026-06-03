@@ -11,4 +11,6 @@ export const GAME_STATES = {
     PAUSED: 'paused',
 }
 
+export const ENEMY_DESPAWN_MARGIN = 200;
+
 export const DEBUG = true;
